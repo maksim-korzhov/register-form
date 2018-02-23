@@ -4,10 +4,47 @@
     max-width: 600px;
 }
 
-.Select-control {
+.form__name,
+.form__sirname,
+.form__phone {
+    height: 38px;
+}
+
+.Select-control,
+.Select-placeholder {
     border-radius: .25rem;
-    height: calc(2.25rem + 2px);
-    padding: .375rem .75rem;
+    height: 38px;
+    color: #495057;
     font-size: 1rem;
+}
+
+.Select-control {
     line-height: 1.5;
+}
+
+.Select-placeholder {
+    line-height: 36px;
+}
+
+.form__job .Select-arrow-zone {
+    display: none;
+}
+
+.pic_belarus {
+    background: url("./img/belarus_l.png");
+    display: block;
+    height: 20px;
+    width: 40px;
+}
+
+.form__phone .Select-control {
+    width: 80px;
+}
+
+.form__phone .Select-clear-zone {
+    display: none;
+}
+
+.form__phone .Select.has-value.is-clearable.Select--single > .Select-control .Select-value {
+    padding-right: 28px;
 }
