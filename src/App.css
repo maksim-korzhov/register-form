@@ -1,0 +1,13 @@
+.app {
+    margin: 0 auto;
+    padding: 50px;
+    max-width: 600px;
+}
+
+.Select-control {
+    border-radius: .25rem;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
