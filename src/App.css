@@ -4,6 +4,20 @@
     max-width: 600px;
 }
 
+label {
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.Select.is-focused:not(.is-open) > .Select-control {
+    border-color: #80bdff;
+    box-shadow: none;
+}
+
 .form__name,
 .form__sirname,
 .form__phone {

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
+import Cleave from 'cleave.js/react';
+import 'cleave.js/dist/addons/cleave-phone.ru';
 
 import './App.css';
 
@@ -163,7 +165,18 @@ class App extends Component {
                                     />
 
                                 </div>
-                                <input type="text" className="form-control" value="+7 495 123-45-67" placeholder="+7 495 123-45-67"/>
+                                <Cleave placeholder="+7 495 456-11-11"
+                                        options={{
+                                            prefix: "+7",
+                                            delimiters: [" ", " ", "-", "-"],
+                                            blocks: [2, 3, 3, 2, 2],
+                                            numericOnly: true
+                                        }}
+                                        onFocus={this.onCreditCardFocus}
+                                        onChange={this.onCreditCardChange}
+                                        className="form-control"
+                                />
+
                             </div>
                         </div>
                     </div>
