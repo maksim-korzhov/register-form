@@ -12,13 +12,13 @@
 
 .Select-control,
 .Select-placeholder {
-    border-radius: .25rem;
     height: 38px;
     color: #495057;
     font-size: 1rem;
 }
 
 .Select-control {
+    border-radius: .25rem;
     line-height: 1.5;
 }
 
@@ -37,12 +37,20 @@
     width: 40px;
 }
 
-.form__phone .Select-control {
+.form__phone .Select-control,
+.form__phone .Select.is-pseudo-focused > .Select-control {
+    background: #ccc;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     width: 80px;
 }
 
 .form__phone .Select-clear-zone {
     display: none;
+}
+
+.form__phone .Select-input input {
+    display: none !important;
 }
 
 .form__phone .Select.has-value.is-clearable.Select--single > .Select-control .Select-value {

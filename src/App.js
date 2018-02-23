@@ -6,22 +6,60 @@ import 'react-select/dist/react-select.css';
 import './App.css';
 
 import bel from './img/belarus_l.png';
+import ind from './img/british_indian_ocean_territory_l.png';
+import bul from './img/bulgaria_l.png';
+import rus from './img/russia_l.png';
+import ukr from './img/ukraine_l.png';
 
 const CountryFlag = (props) => {
-    const countryFlagStyle = {
-        display: "block",
-        padding: "9px 25px 9px 10px",
-    };
-
     return (
-        <div className="Select-value" title={props.value}>
+        <div className="Select-value">
 				<span className="Select-value-label">
-                    <div className={ countryFlagStyle }>
-                        <img style={{ width: "40px" }} src={ props.value.pic } alt=""/>
+                    <div>
+                        <img style={{ width: "30px", height: "15px" }} src={ props.value.pic } alt=""/>
                     </div>
 				</span>
         </div>
     );
+};
+
+class CountryFlagOption extends Component {
+    constructor(props) {
+        super(props);
+
+        this.handleMouseDown = this.handleMouseDown.bind(this);
+        this.handleMouseEnter = this.handleMouseEnter.bind(this);
+        this.handleMouseMove = this.handleMouseMove.bind(this);
+    }
+
+    handleMouseDown (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        this.props.onSelect(this.props.option, event);
+    }
+
+    handleMouseEnter (event) {
+        this.props.onFocus(this.props.option, event);
+    }
+
+    handleMouseMove (event) {
+        if (this.props.isFocused) return;
+        this.props.onFocus(this.props.option, event);
+    }
+
+    render() {
+        return (
+            <div className={ this.props.className }
+                 onMouseDown={ this.handleMouseDown }
+                 onMouseEnter={ this.handleMouseEnter }
+                 onMouseMove={ this.handleMouseMove }
+            >
+                <div>
+                    <img style={{ width: "30px", height: "15px" }} src={ this.props.option.pic } alt=""/>
+                </div>
+            </div>
+        );
+    }
 };
 
 class App extends Component {
@@ -114,18 +152,18 @@ class App extends Component {
                                         value={ countryValue }
                                         onChange={ this.handleCountrySelectChange }
                                         valueComponent={ CountryFlag }
-                                        focusedOption={ {value: 'bel', pic: bel}     }
+                                        optionComponent={ CountryFlagOption }
                                         options={[
                                             {value: 'bel', pic: bel},
-                                            {value: 'bul', pic: bel},
-                                            {value: 'ind', pic: bel},
-                                            {value: 'rus', pic: bel},
-                                            {value: 'urk', pic: bel}
+                                            {value: 'bul', pic: bul},
+                                            {value: 'ind', pic: ind},
+                                            {value: 'rus', pic: rus},
+                                            {value: 'ukr', pic: ukr}
                                         ]}
                                     />
 
                                 </div>
-                                <input type="text" className="form-control" placeholder="+7 495 123-45-67"/>
+                                <input type="text" className="form-control" value="+7 495 123-45-67" placeholder="+7 495 123-45-67"/>
                             </div>
                         </div>
                     </div>
