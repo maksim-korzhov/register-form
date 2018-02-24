@@ -14,7 +14,7 @@ class App extends Component {
 
         this.state = {
             jobSelectedOption: "",
-            countrySelectedOption: { value: "bel", pic: bel, code: "+9" }
+            countrySelectedOption: { value: "bel", pic: bel, code: "+8" }
         };
 
         this.handleJobSelectChange = this.handleJobSelectChange.bind(this);

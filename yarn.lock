@@ -1333,10 +1333,6 @@ clean-css@4.1.x:
   dependencies:
     source-map "0.5.x"
 
-cleave.js@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/cleave.js/-/cleave.js-1.1.1.tgz#a575ea4afe963b00589d1bac0909e1a4da98f7c3"
-
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -5152,6 +5148,10 @@ react-input-autosize@^2.1.2:
   resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.2.1.tgz#ec428fa15b1592994fb5f9aa15bb1eb6baf420f8"
   dependencies:
     prop-types "^15.5.8"
+
+react-input-mask@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-1.2.2.tgz#225a1130d316ee54cea7431f004c738b4c41b4da"
 
 react-scripts@1.1.1:
   version "1.1.1"

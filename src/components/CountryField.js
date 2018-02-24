@@ -30,11 +30,11 @@ class CountryField extends Component {
                             valueComponent={ CountryFlag }
                             optionComponent={ CountryFlagOption }
                             options={[
-                                {value: "bel", pic: bel, code: "+9"},
-                                {value: "bul", pic: bul, code: "+1"},
+                                {value: "bel", pic: bel, code: "+8"},
+                                {value: "bul", pic: bul, code: "+11"},
                                 {value: "ind", pic: ind, code: "+2"},
                                 {value: "rus", pic: rus, code: "+7"},
-                                {value: "ukr", pic: ukr, code: "+3"}
+                                {value: "ukr", pic: ukr, code: "+38"}
                             ]}
                         />
                     </div>

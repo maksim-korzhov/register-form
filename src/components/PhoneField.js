@@ -1,19 +1,15 @@
 import React, { Component } from "react";
-import Cleave from "cleave.js/react";
+import InputMask from 'react-input-mask';
 
 class PhoneField extends Component {
     render() {
         const { code } = this.props;
 
         return (
-            <Cleave placeholder={`${ code } 495 456-11-11`}
-                    options={{
-                        //prefix: code,
-                        delimiters: [" ", " ", "-", "-"],
-                        blocks: [2, 3, 3, 2, 2],
-                        numericOnly: true
-                    }}
-                    className="form-control"
+            <InputMask
+                placeholder={`${ code } 495 123-11-11`}
+                mask={`${ code } 999 999-99-99`}
+                className="form-control"
             />
         );
     };
