@@ -32,6 +32,7 @@ class App extends Component {
     render() {
         return (
             <div className="app">
+                <h3 className="text-center app__header"><strong>Зарегистрируйтесь</strong> и начните продавать услуги через интернет уже сегодня</h3>
                 <form>
                     <div className="row">
                         <div className="col">

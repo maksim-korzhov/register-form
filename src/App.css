@@ -1,14 +1,23 @@
 .app {
     margin: 0 auto;
     padding: 50px;
-    max-width: 600px;
+    max-width: 500px;
+}
+
+.app__header {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
 label {
+    color: #999;
     font-size: .8rem;
     text-transform: uppercase;
 }
 
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn:active,
+.btn:focus,
 .form-control:focus {
     box-shadow: none;
 }
@@ -22,6 +31,11 @@ label {
 .form__sirname,
 .form__phone {
     height: 38px;
+}
+
+.Select-value {
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .Select-control,
@@ -38,6 +52,12 @@ label {
 
 .Select-placeholder {
     line-height: 36px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.Select--single > .Select-control .Select-value {
+    padding-left: 12px;
 }
 
 .form__job .Select-arrow-zone {
@@ -53,7 +73,7 @@ label {
 
 .form__phone .Select-control,
 .form__phone .Select.is-pseudo-focused > .Select-control {
-    background: #ccc;
+    background: #eee;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     width: 80px;
@@ -69,4 +89,8 @@ label {
 
 .form__phone .Select.has-value.is-clearable.Select--single > .Select-control .Select-value {
     padding-right: 28px;
+}
+
+.btn {
+    margin-top: 20px;
 }
