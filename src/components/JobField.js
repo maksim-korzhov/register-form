@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Select from "react-select";
+import JobOption from "./JobOption";
 
 class JobField extends Component {
     render() {
@@ -37,6 +38,7 @@ class JobField extends Component {
                     value={ jobValue }
                     onChange={ this.props.handleJobSelectChange }
                     options={ options }
+                    optionComponent={ JobOption }
                 />
             </div>
         );

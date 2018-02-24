@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class CountryFlagOption extends Component {
+class JobOption extends Component {
     constructor(props) {
         super(props);
 
@@ -24,19 +24,31 @@ class CountryFlagOption extends Component {
         this.props.onFocus(this.props.option, event);
     }
 
+    highlighted (str, input = "") {
+        let newStr = str;
+
+        if( input.length > 0 ) {
+            const reg = new RegExp(`(${input})`, "gi");
+            newStr = str.replace(reg, "<strong>$1</strong>")
+        }
+
+        return newStr;
+    }
+
     render() {
+        const { inputValue } = this.props;
+        const label = this.highlighted(this.props.option.label, inputValue);
+
         return (
             <div className={ this.props.className }
                  onMouseDown={ this.handleMouseDown }
                  onMouseEnter={ this.handleMouseEnter }
                  onMouseMove={ this.handleMouseMove }
             >
-                <span>
-                    <img style={{ width: "25px", height: "15px" }} src={ this.props.option.pic } alt=""/>
-                </span>
+                <div dangerouslySetInnerHTML={{ __html: label }} />
             </div>
         );
     }
 }
 
-export default CountryFlagOption;
+export default JobOption;

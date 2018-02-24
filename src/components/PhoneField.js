@@ -6,12 +6,15 @@ class PhoneField extends Component {
         const { code } = this.props;
 
         return (
-            <InputMask
-                placeholder={`${ code } 495 123-11-11`}
-                mask={`${ code } 999 999-99-99`}
-                className="form-control"
-                required="required"
-            />
+            <div className="form-control">
+                <span className="form_phone-prefix">{ code }</span>
+                <InputMask
+                    placeholder={` 495 123-11-11`}
+                    mask={` 999 999-99-99`}
+                    required="required"
+                    className="form_phone-field"
+                />
+            </div>
         );
     };
 }

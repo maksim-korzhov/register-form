@@ -1,18 +1,30 @@
 .app {
     margin: 0 auto;
     padding: 50px;
-    max-width: 500px;
+    width: 470px;
 }
 
 .app__header {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 38px;
+}
+
+.form-group {
+    margin-bottom: 20px;
 }
 
 label {
     color: #999;
-    font-size: .8rem;
+    font-size: 14px;
     text-transform: uppercase;
+}
+
+.row:first-child .col:nth-child(1) {
+    padding-right: 6px;
+}
+
+.row:first-child .col:nth-child(2) {
+    padding-left: 6px;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -30,7 +42,7 @@ label {
 .form__name,
 .form__sirname,
 .form__phone {
-    height: 38px;
+    height: 44px;
 }
 
 .Select-value {
@@ -40,7 +52,7 @@ label {
 
 .Select-control,
 .Select-placeholder {
-    height: 38px;
+    height: 44px;
     color: #495057;
     font-size: 1rem;
 }
@@ -51,7 +63,7 @@ label {
 }
 
 .Select-placeholder {
-    line-height: 36px;
+    line-height: 42px;
     padding-left: 12px;
     padding-right: 12px;
 }
@@ -76,11 +88,19 @@ label {
     background: #eee;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    width: 80px;
+    width: 74px;
+}
+
+.form__phone .Select--single > .Select-control .Select-value {
+    padding-left: 9px;
 }
 
 .form__phone .Select-clear-zone {
     display: none;
+}
+
+.Select-input {
+    line-height: 42px;
 }
 
 .form__phone .Select-input input {
@@ -92,5 +112,33 @@ label {
 }
 
 .btn {
-    margin-top: 20px;
+    margin-top: 27px;
+    padding: .58rem 1.3rem;
+    font-size: 1rem;
+}
+
+.form__phone .form-control {
+    display: flex;
+}
+
+.form_phone-field {
+    border: none;
+    outline: none;
+    line-height: 30px;
+    font-size: 20px;
+    max-width: 70%;
+}
+
+.form_phone-prefix {
+    color: #000;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.form__job .Select-option.is-focused {
+    background: none;
+}
+
+.Select-value-label {
+    line-height: 40px;
 }
