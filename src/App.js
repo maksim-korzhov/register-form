@@ -38,13 +38,13 @@ class App extends Component {
                         <div className="col">
                             <div className="form-group">
                                 <label htmlFor="name">Имя</label>
-                                <input type="text" className="form-control form__name" id="name" placeholder="Введите имя"/>
+                                <input type="text" className="form-control form__name" id="name" placeholder="Введите имя" required/>
                             </div>
                         </div>
                         <div className="col">
                             <div className="form-group">
                                 <label htmlFor="sirname">Фамилия</label>
-                                <input type="text" className="form-control form__sirname" id="sirname" placeholder="Введите фамилию"/>
+                                <input type="text" className="form-control form__sirname" id="sirname" placeholder="Введите фамилию" required/>
                             </div>
                         </div>
                     </div>

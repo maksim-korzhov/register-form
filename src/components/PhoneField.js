@@ -10,6 +10,7 @@ class PhoneField extends Component {
                 placeholder={`${ code } 495 123-11-11`}
                 mask={`${ code } 999 999-99-99`}
                 className="form-control"
+                required="required"
             />
         );
     };
